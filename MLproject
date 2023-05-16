@@ -1,6 +1,15 @@
 name: Flower Species Classification
 description: A simple project for flower species classification using K-Nearest Neighbors.
 
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      alpha: {type: float, default: 0.5}
+      l1_ratio: {type: float, default: 0.1}
+    command: "python train.py {alpha} {l1_ratio}"
+
 environment:
   python: "3.8.12"
   dependencies:
