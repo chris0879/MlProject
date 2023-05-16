@@ -1,0 +1,15 @@
+name: Flower Species Classification
+description: A simple project for flower species classification using K-Nearest Neighbors.
+
+environment:
+  python: "3.8.12"
+  dependencies:
+    - pandas
+    - scikit-learn
+
+commands:
+  - train:
+      script: python train.py
+
+  - evaluate:
+      script: python evaluate.py
