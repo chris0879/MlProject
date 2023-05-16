@@ -6,19 +6,6 @@ conda_env: conda.yaml
 entry_points:
   main:
     parameters:
-      alpha: {type: float, default: 0.5}
-      l1_ratio: {type: float, default: 0.1}
-    command: "python train.py {alpha} {l1_ratio}"
-
-environment:
-  python: "3.8.12"
-  dependencies:
-    - pandas
-    - scikit-learn
-
-commands:
-  - train:
-      script: python train.py
-
-  - evaluate:
-      script: python evaluate.py
+      alpha: float
+      l1_ratio: float
+    command: "python train.py --alpha {alpha} --l1_ratio {l1_ratio}"
